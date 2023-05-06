@@ -18,15 +18,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = getIntent();
+        Intent registro = getIntent();
 
-        usuario1 = intent.getStringExtra("usuario");
-        password1 = intent.getStringExtra("password");
+        usuario1 = registro.getStringExtra("usuario");
+        password1 = registro.getStringExtra("password");
+
+
     }
 
     public void registrarse(View v){
-        Intent intent = new Intent(this, registrarse.class);
-        startActivity(intent);
+        Intent registrarse = new Intent(this, registrarse.class);
+        startActivity(registrarse);
     }
 
     public void entrar(View v){
@@ -34,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
 
         if (usuario.getText().toString().equals(usuario1) && password.getText().toString().equals(password1)){
-            //Intent intent = new Intent(this, menu.class);
-            //startActivity(intent);
+            Intent intent = new Intent(this, votacion.class);
+            startActivity(intent);
         }
         else{
             Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
         }
 
-        
+
     }
 }
