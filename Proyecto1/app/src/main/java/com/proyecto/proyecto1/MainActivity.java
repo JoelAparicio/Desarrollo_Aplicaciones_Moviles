@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void registrarse(View v){
         Intent registrarse = new Intent(this, registrarse.class);
-        startActivity(registrarse);
+        startActivityForResult(registrarse, 100);
     }
 
     public void entrar(View v){
@@ -40,9 +40,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else{
-            Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Usuario o contraseña incorrectos, registrese en caso de no haberse registrado", Toast.LENGTH_LONG).show();
         }
+        
+    }
 
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if ((requestCode == 100) && (resultCode == RESULT_OK)){
+            usuario1 = data.getStringExtra("usuario");
+            password1 = data.getStringExtra("password");
+        }
     }
 }
