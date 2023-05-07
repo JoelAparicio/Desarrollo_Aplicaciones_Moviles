@@ -20,38 +20,53 @@ public class finalista extends AppCompatActivity {
         setContentView(R.layout.activity_finalista);
 
         Intent finalista = getIntent();
-        String finalist = finalista.getStringExtra("id");
+//        Bundle finalista = getIntent().getExtras();
+        int finalist = finalista.getIntExtra("id", 0);
 
         tv1 = findViewById(R.id.tv1);
+//        Toast.makeText(this, "Evaluando finalista N°"+finalist, Toast.LENGTH_LONG).show();
         tv1.setText("Finalista N°"+finalist);
 
         eval1 = findViewById(R.id.eval1);
         eval2 = findViewById(R.id.eval2);
         eval3 = findViewById(R.id.eval3);
 
+        // TESTING ONLY
+        eval1.setText(String.valueOf(finalist));
+        eval2.setText(String.valueOf(finalist));
+        eval3.setText(String.valueOf(finalist));
+        // TESTING ONLY
+
     }
 
     public void evaluate (View v) {
-        int content = Integer.parseInt(eval1.getText().toString());
-        int projection = Integer.parseInt(eval2.getText().toString());
-        int language = Integer.parseInt(eval3.getText().toString());
-
-        if (content > 10 || content < 1) {
-            Toast.makeText(this, "Las evaluaciones deben estar en el rango de 1-10.", Toast.LENGTH_LONG).show();
-        }
-        else if (projection > 10 || projection < 1) {
-            Toast.makeText(this, "Las evaluaciones deben estar en el rango de 1-10.", Toast.LENGTH_LONG).show();
-        }
-        else if (language > 10 || language < 1) {
-            Toast.makeText(this, "Las evaluaciones deben estar en el rango de 1-10.", Toast.LENGTH_LONG).show();
+        if (eval1.getText().toString().isEmpty() || eval2.getText().toString().isEmpty() || eval3.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
         }
         else {
-            Intent evaluate = new Intent(this, votacion.class);
-            int suma = content + projection + language;
-            evaluate.putExtra("part", suma);
+            int content = Integer.parseInt(eval1.getText().toString());
+            int projection = Integer.parseInt(eval2.getText().toString());
+            int language = Integer.parseInt(eval3.getText().toString());
 
-            setResult(RESULT_OK, evaluate);
-            finish();
+            if (content > 10 || content < 1) {
+                Toast.makeText(this, "Las evaluaciones deben estar en el rango de 1-10.", Toast.LENGTH_LONG).show();
+            }
+            else if (projection > 10 || projection < 1) {
+                Toast.makeText(this, "Las evaluaciones deben estar en el rango de 1-10.", Toast.LENGTH_LONG).show();
+            }
+            else if (language > 10 || language < 1) {
+                Toast.makeText(this, "Las evaluaciones deben estar en el rango de 1-10.", Toast.LENGTH_LONG).show();
+            }
+            else {
+                Intent evaluate = new Intent(this, votacion.class);
+                int suma = content + projection + language;
+                evaluate.putExtra("part", suma);
+//                Toast.makeText(this, "Puntaje: "+suma, Toast.LENGTH_LONG).show();
+
+                setResult(RESULT_OK, evaluate);
+                finish();
+            }
+
         }
 
     }
