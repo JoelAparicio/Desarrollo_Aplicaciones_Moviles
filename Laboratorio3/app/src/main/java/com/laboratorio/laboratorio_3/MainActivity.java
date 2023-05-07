@@ -28,7 +28,5 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("area", resultado);
         startActivity(intent);
 
-
-
     }
 }
