@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         if ((requestCode == 100) && (resultCode == RESULT_OK)){
             usuario1 = data.getStringExtra("usuario");
             password1 = data.getStringExtra("password");
+            Toast toast = Toast.makeText(this, "Usuario registrado", Toast.LENGTH_LONG);
         }
     }
 }
