@@ -22,7 +22,9 @@ public class registrarse extends AppCompatActivity {
 
     public void registrarse(View v){
         int longitud = password.getText().toString().length();
-        if (usuario == null || password == null){
+        String usuario = this.usuario.getText().toString();
+        String password = this.password.getText().toString();
+        if (usuario.isEmpty() || password.isEmpty()){
             Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
             return;
         }
@@ -32,8 +34,8 @@ public class registrarse extends AppCompatActivity {
         }
         else {
             Intent registro = new Intent();
-            registro.putExtra("usuario", usuario.getText().toString());
-            registro.putExtra("password", password.getText().toString());
+            registro.putExtra("usuario", usuario);
+            registro.putExtra("password", password);
 
             setResult(RESULT_OK, registro);
             finish();
