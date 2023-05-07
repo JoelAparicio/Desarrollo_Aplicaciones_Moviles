@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/Letra2"
     android:configChanges="orientation|screenSize"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".votacion">
 
     <TextView
@@ -40,6 +40,21 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/BackGround"
+        android:onClick="evaluate"
+        android:text="Evaluar finalista"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,27 +66,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898" />
+        app:layout_constraintVertical_bias="0.773" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/BackGround"
-        android:onClick="finalize"
-        android:text="Evaluar finalista"
-        android:textColorLink="#FFFFFF"
+    <RadioGroup
+        android:layout_width="331dp"
+        android:layout_height="179dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
-
-    <RadioGroup
-        android:layout_width="334dp"
-        android:layout_height="162dp"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="128dp">
+        app:layout_constraintVertical_bias="0.304">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -164,7 +168,6 @@
             </TableRow>
 
         </TableLayout>
-
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

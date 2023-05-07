@@ -22,6 +22,7 @@ public class finalista extends AppCompatActivity {
         Intent finalista = getIntent();
         String finalist = finalista.getStringExtra("id");
 
+        tv1 = findViewById(R.id.tv1);
         tv1.setText("Finalista N°"+finalist);
 
         eval1 = findViewById(R.id.eval1);
@@ -30,10 +31,10 @@ public class finalista extends AppCompatActivity {
 
     }
 
-    public void finalize (View v) {
+    public void evaluate (View v) {
         int content = Integer.parseInt(eval1.getText().toString());
-        int projection = Integer.parseInt(eval1.getText().toString());
-        int language = Integer.parseInt(eval1.getText().toString());
+        int projection = Integer.parseInt(eval2.getText().toString());
+        int language = Integer.parseInt(eval3.getText().toString());
 
         if (content > 10 || content < 1) {
             Toast.makeText(this, "Las evaluaciones deben estar en el rango de 1-10.", Toast.LENGTH_LONG).show();
@@ -45,11 +46,11 @@ public class finalista extends AppCompatActivity {
             Toast.makeText(this, "Las evaluaciones deben estar en el rango de 1-10.", Toast.LENGTH_LONG).show();
         }
         else {
-            Intent intent = new Intent(this, votacion.class);
+            Intent evaluate = new Intent(this, votacion.class);
             int suma = content + projection + language;
-            intent.putExtra("part", suma);
+            evaluate.putExtra("part", suma);
 
-            setResult(RESULT_OK, intent);
+            setResult(RESULT_OK, evaluate);
             finish();
         }
 

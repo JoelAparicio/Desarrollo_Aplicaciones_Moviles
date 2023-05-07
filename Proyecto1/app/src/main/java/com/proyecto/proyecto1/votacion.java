@@ -20,14 +20,18 @@ public class votacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_votacion);
 
+        part1 = findViewById(R.id.part1);
+        part2 = findViewById(R.id.part2);
+        part3 = findViewById(R.id.part3);
+
         String pending = "Pendiente por votación";
         part1.setText(pending);
         part2.setText(pending);
         part3.setText(pending);
-        part4.setText(pending);
-        part5.setText(pending);
-        part6.setText(pending);
-        part7.setText(pending);
+//        part4.setText(pending);
+//        part5.setText(pending);
+//        part6.setText(pending);
+//        part7.setText(pending);
 
     }
 
@@ -42,24 +46,25 @@ public class votacion extends AppCompatActivity {
     }
 
     public void evaluate (View v) {
-        Intent intent = new Intent(this, finalista.class);
+        Intent votacion = new Intent(this, finalista.class);
 
         boolean flag1;
 
         switch(select) {
             case 1:
-                intent.putExtra("id", 1);
+                votacion.putExtra("id", 1);
             case 2:
-                intent.putExtra("id", 2);
+                votacion.putExtra("id", 2);
             case 3:
-                intent.putExtra("id", 3);
+                votacion.putExtra("id", 3);
             default:
                 flag1 = false;
+                Toast.makeText(this, "Por favor seleccione un finalista.", Toast.LENGTH_LONG).show();
 
         }
 
         if (flag1) {
-            startActivityForResult(intent, 50);
+            startActivityForResult(votacion, 50);
         }
     }
 
