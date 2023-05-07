@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Letra2"
+    android:background="@color/BackGround"
     android:configChanges="orientation|screenSize"
     android:orientation="vertical"
     tools:context=".votacion"
@@ -18,7 +18,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Comunidad de la Arenosa"
-        android:textColor="@color/BackGround"
+        android:textColor="@color/Color_letra"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.615"
@@ -32,7 +32,7 @@
         android:layout_marginBottom="644dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Concurso de oratoria - Votación"
-        android:textColor="@color/BackGround"
+        android:textColor="@color/Color_letra"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,9 +43,10 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/BackGround"
+        android:backgroundTint="@color/boton"
+        android:fontFamily="@font/open_sans_bold"
         android:onClick="evaluate"
         android:text="Evaluar finalista"
         android:textColorLink="#FFFFFF"
@@ -58,18 +59,19 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/BackGround"
+        android:backgroundTint="@color/boton"
+        android:fontFamily="@font/open_sans_bold"
         android:onClick="finalize"
         android:text="Ver Resultados"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.928" />
+        app:layout_constraintVertical_bias="0.932" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -86,58 +88,74 @@
             android:id="@+id/heading1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_bold"
             android:text="N° de finalista"
             android:textAlignment="center"
+            android:textColor="@color/Color_letra"
             android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radio1"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:fontFamily="@font/open_sans"
             android:onClick="radio1"
-            android:text="1" />
+            android:text="1"
+            android:textColor="@color/Color_letra" />
 
         <RadioButton
             android:id="@+id/radio2"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:fontFamily="@font/open_sans"
             android:onClick="radio2"
-            android:text="2" />
+            android:text="2"
+            android:textColor="@color/Color_letra" />
 
         <RadioButton
             android:id="@+id/radio3"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:fontFamily="@font/open_sans"
             android:onClick="radio3"
-            android:text="3" />
+            android:text="3"
+            android:textColor="@color/Color_letra" />
 
         <RadioButton
             android:id="@+id/radio4"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:fontFamily="@font/open_sans"
             android:onClick="radio4"
-            android:text="4" />
+            android:text="4"
+            android:textColor="@color/Color_letra" />
 
         <RadioButton
             android:id="@+id/radio5"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:fontFamily="@font/open_sans"
             android:onClick="radio5"
-            android:text="5" />
+            android:text="5"
+            android:textColor="@color/Color_letra" />
 
         <RadioButton
             android:id="@+id/radio6"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:fontFamily="@font/open_sans"
             android:onClick="radio6"
-            android:text="6" />
+            android:text="6"
+            android:textColor="@color/Color_letra" />
 
         <RadioButton
             android:id="@+id/radio7"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:fontFamily="@font/open_sans"
             android:onClick="radio7"
-            android:text="7" />
+            android:text="7"
+            android:textColor="@color/Color_letra" />
 
     </RadioGroup>
 
@@ -161,8 +179,10 @@
                 android:id="@+id/heading2"
                 android:layout_width="124dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_bold"
                 android:text="Evaluación"
                 android:textAlignment="center"
+                android:textColor="@color/Color_letra"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -175,8 +195,12 @@
                 android:id="@+id/part1"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
                 android:text="null"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
         <TableRow
@@ -187,8 +211,12 @@
                 android:id="@+id/part2"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
                 android:text="null"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
         <TableRow
@@ -199,8 +227,12 @@
                 android:id="@+id/part3"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
                 android:text="null"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
         <TableRow
@@ -211,8 +243,12 @@
                 android:id="@+id/part4"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
                 android:text="null"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
         <TableRow
@@ -223,8 +259,12 @@
                 android:id="@+id/part5"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
                 android:text="null"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
         <TableRow
@@ -235,8 +275,12 @@
                 android:id="@+id/part6"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
                 android:text="null"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
         <TableRow
@@ -247,8 +291,12 @@
                 android:id="@+id/part7"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
                 android:text="null"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
     </TableLayout>

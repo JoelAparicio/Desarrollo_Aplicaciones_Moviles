@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 public class resultado extends AppCompatActivity {
     TextView score1, score2, score3, score4, score5, score6, score7;
     TextView pos1, pos2, pos3, pos4, pos5, pos6, pos7;
@@ -36,7 +38,7 @@ public class resultado extends AppCompatActivity {
         Intent resultado = getIntent();
         int[] scores = resultado.getIntArrayExtra("scores");
         Toast.makeText(this, "test", Toast.LENGTH_SHORT).show();
-        String puntaje;
+//        String puntaje;
 
         for (int i = 0; i < scores.length; i++) {
 //            Toast.makeText(this, "test "+i, Toast.LENGTH_SHORT).show();
@@ -64,7 +66,26 @@ public class resultado extends AppCompatActivity {
         }
 
 
-        // HMMMMMMMMMMM
+        TextView[] scoresArray = new TextView[7];
+        scoresArray[0] = pos1;
+        scoresArray[1] = pos2;
+        scoresArray[2] = pos3;
+        scoresArray[3] = pos4;
+        scoresArray[4] = pos5;
+        scoresArray[5] = pos6;
+        scoresArray[6] = pos7;
+
+        String[] posiciones = {"1er lugar", "2do lugar", "3er lugar", "4to lugar", "5to lugar", "6to lugar", "7mo lugar"};
+
+        Arrays.sort(scores);
+
+        for (int i = 0; i < scoresArray.length; i++) {
+            int posicion = Arrays.binarySearch(scores, Integer.parseInt(scoresArray[i].getText().toString()));
+            String lugar = posiciones[posicion];
+            scoresArray[i].setText(lugar);
+        }
+
+
 
 
     }

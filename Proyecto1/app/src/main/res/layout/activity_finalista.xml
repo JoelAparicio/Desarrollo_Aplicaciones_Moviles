@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background1"
-    android:backgroundTint="@color/background1"
+    android:background="@color/BackGround"
+    android:backgroundTint="@color/BackGround"
     tools:context=".finalista">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_marginTop="27dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Concurso de oratoria - Votación"
-        android:textColor="@color/BackGround"
+        android:textColor="@color/Color_letra"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.382"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans_bold"
         android:text="Finalista N°"
-        android:textColor="@color/BackGround"
+        android:textColor="@color/Color_letra"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +41,8 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton"
+        android:fontFamily="@font/open_sans_bold"
         android:onClick="evaluate"
         android:text="Finalizar evaluación"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,16 +73,20 @@
                 android:id="@+id/heading1"
                 android:layout_width="107dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_bold"
                 android:text="Categoría"
                 android:textAlignment="center"
+                android:textColor="@color/Color_letra"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/heading2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_bold"
                 android:text="Puntuación"
                 android:textAlignment="center"
+                android:textColor="@color/Color_letra"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -93,8 +99,10 @@
                 android:id="@+id/f1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
                 android:text="Contenido"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
 
             <EditText
                 android:id="@+id/eval1"
@@ -102,7 +110,12 @@
                 android:layout_height="wrap_content"
                 android:digits="1,2,3,4,5,6,7,8,9,10"
                 android:ems="10"
-                android:inputType="number" />
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:hint="1-10"
+                android:textColorHint="#C8C2AE"
+                android:inputType="number"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
         <TableRow
@@ -114,8 +127,10 @@
                 android:id="@+id/f2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
                 android:text="Proyección"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
 
             <EditText
                 android:id="@+id/eval2"
@@ -123,7 +138,12 @@
                 android:layout_height="wrap_content"
                 android:digits="1,2,3,4,5,6,7,8,9,10"
                 android:ems="10"
-                android:inputType="number" />
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:hint="1-10"
+                android:textColorHint="#C8C2AE"
+                android:inputType="number"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
         <TableRow
@@ -135,8 +155,10 @@
                 android:id="@+id/f3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
                 android:text="Lenguaje"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra" />
 
             <EditText
                 android:id="@+id/eval3"
@@ -144,7 +166,12 @@
                 android:layout_height="wrap_content"
                 android:digits="1,2,3,4,5,6,7,8,9,10"
                 android:ems="10"
-                android:inputType="number" />
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:hint="1-10"
+                android:textColorHint="#C8C2AE"
+                android:inputType="number"
+                android:textColor="@color/Color_letra" />
         </TableRow>
 
     </TableLayout>
