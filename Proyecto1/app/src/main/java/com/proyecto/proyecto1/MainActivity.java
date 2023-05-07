@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.app.Activity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             Toast.makeText(this, "Usuario o contraseña incorrectos, registrese en caso de no haberse registrado", Toast.LENGTH_LONG).show();
         }
-        
+
     }
 
     @Override
