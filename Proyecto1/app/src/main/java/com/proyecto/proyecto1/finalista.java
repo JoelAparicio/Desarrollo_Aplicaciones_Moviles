@@ -47,8 +47,10 @@ public class finalista extends AppCompatActivity {
         else {
             Intent intent = new Intent(this, votacion.class);
             int suma = content + projection + language;
-            intent.putExtra("", suma);
-            startActivity(intent);
+            intent.putExtra("part", suma);
+
+            setResult(RESULT_OK, intent);
+            finish();
         }
 
     }
