@@ -35,13 +35,7 @@ public class MainActivity extends AppCompatActivity {
         usuario = (EditText) findViewById(R.id.usuario);
         password = (EditText) findViewById(R.id.password);
 
-        // TESTING ONLY
-//        usuario.setText("1234");
-//        password.setText("1234");
-//
-//        usuario1 = "1234";
-//        password1 = "1234";
-        // TESTING ONLY
+
 
         if (usuario.getText().toString().equals(usuario1) && password.getText().toString().equals(password1)){
             Intent intent = new Intent(this, votacion.class);

@@ -70,46 +70,6 @@ public class resultado extends AppCompatActivity {
             }
         }
 
-        // RESUMEN FINAL
-
-        TextView[] scoresArray = new TextView[7];
-        scoresArray[0] = pos1;
-        scoresArray[1] = pos2;
-        scoresArray[2] = pos3;
-        scoresArray[3] = pos4;
-        scoresArray[4] = pos5;
-        scoresArray[5] = pos6;
-        scoresArray[6] = pos7;
-
-        String[] posiciones = {"1er lugar", "2do lugar", "3er lugar", "4to lugar", "5to lugar", "6to lugar", "7mo lugar"};
-
-        HashMap<Integer, List<Integer>> participantes = new HashMap<Integer, List<Integer>>();
-        for (int i = 0; i < scores.length; i++) {
-            int score = scores[i];
-            if (!participantes.containsKey(score)) {
-                participantes.put(score, new ArrayList<Integer>());
-            }
-            participantes.get(score).add(i);
-        }
-
-        Arrays.sort(scores);
-
-        for (int i = 0; i < scores.length; i++) {
-            int puntaje = scores[scores.length - i - 1];
-            String lugar;
-            if (participantes.get(puntaje).size() > 1) {
-                lugar = "Empate";
-            } else {
-                int posicion = participantes.get(puntaje).get(0);
-                lugar = posiciones[i];
-                scoresArray[posicion].setText(lugar);
-            }
-            for (int j : participantes.get(puntaje)) {
-                if (j != i) {
-                    scoresArray[j].setText(lugar);
-                }
-            }
-        }
 
         // RANKINGS
 
@@ -165,12 +125,11 @@ public class resultado extends AppCompatActivity {
             }
         }
 
+
         int firstNumber = firstIndex + 1;
         int secondNumber = secondIndex + 1;
         int thirdNumber = thirdIndex + 1;
         int fourthNumber = fourthIndex + 1;
-
-//        Toast.makeText(this, "Los 4 finalistas con mayor puntaje son: "+firstNumber+", "+secondNumber+", "+thirdNumber+", y "+fourthNumber, Toast.LENGTH_LONG).show();
 
         String[] positions = {"1er lugar", "2do lugar", "3er lugar"};
 
@@ -207,6 +166,48 @@ public class resultado extends AppCompatActivity {
         positionArray[0].setText(positions[0]);
         positionArray[1].setText(positions[1]);
         positionArray[2].setText(positions[2]);
+
+
+        // RESUMEN FINAL
+
+        TextView[] scoresArray = new TextView[7];
+        scoresArray[0] = pos1;
+        scoresArray[1] = pos2;
+        scoresArray[2] = pos3;
+        scoresArray[3] = pos4;
+        scoresArray[4] = pos5;
+        scoresArray[5] = pos6;
+        scoresArray[6] = pos7;
+
+        String[] posiciones = {"1er lugar", "2do lugar", "3er lugar", "4to lugar", "5to lugar", "6to lugar", "7mo lugar"};
+
+        HashMap<Integer, List<Integer>> participantes = new HashMap<Integer, List<Integer>>();
+        for (int i = 0; i < scores.length; i++) {
+            int score = scores[i];
+            if (!participantes.containsKey(score)) {
+                participantes.put(score, new ArrayList<Integer>());
+            }
+            participantes.get(score).add(i);
+        }
+
+        Arrays.sort(scores);
+
+        for (int i = 0; i < scores.length; i++) {
+            int puntaje = scores[scores.length - i - 1];
+            String lugar;
+            if (participantes.get(puntaje).size() > 1) {
+                lugar = "Empate";
+            } else {
+                int posicion = participantes.get(puntaje).get(0);
+                lugar = posiciones[i];
+                scoresArray[posicion].setText(lugar);
+            }
+            for (int j : participantes.get(puntaje)) {
+                if (j != i) {
+                    scoresArray[j].setText(lugar);
+                }
+            }
+        }
 
     }
 }

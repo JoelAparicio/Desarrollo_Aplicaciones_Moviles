@@ -17,9 +17,7 @@ public class votacion extends AppCompatActivity {
     int select = 0;
     int[] finalscores = {0, 0, 0, 0, 0, 0, 0};
 
-    // TESTING ONLY
-//    int[] finalscores = {3, 6, 9, 12, 15, 18, 21};
-    // TESTING ONLY
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,33 +47,7 @@ public class votacion extends AppCompatActivity {
         part6.setText(pending);
         part7.setText(pending);
 
-        // TESTING ONLY
-//        for (int i = 0; i < finalscores.length; i++) {
-//
-//            if (i == 0) {
-//                part1.setText(String.valueOf(finalscores[i]));
-//            }
-//            else if (i == 1) {
-//                part2.setText(String.valueOf(finalscores[i]));
-//            }
-//            else if (i == 2) {
-//                part3.setText(String.valueOf(finalscores[i]));
-//            }
-//            else if (i == 3) {
-//                part4.setText(String.valueOf(finalscores[i]));
-//            }
-//            else if (i == 4) {
-//                part5.setText(String.valueOf(finalscores[i]));
-//            }
-//            else if (i == 5) {
-//                part6.setText(String.valueOf(finalscores[i]));
-//            }
-//            else if (i == 6) {
-//                part7.setText(String.valueOf(finalscores[i]));
-//            }
-//        }
-        // TESTING ONLY
-
+        
 
     }
 
