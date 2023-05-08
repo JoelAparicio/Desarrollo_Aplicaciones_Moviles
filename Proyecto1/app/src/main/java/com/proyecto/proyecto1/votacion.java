@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class votacion extends AppCompatActivity {
 
-    private TextView part1, part2, part3, part4, part5, part6, part7;
+    private TextView part1, part2, part3, part4, part5, part6, part7, user;
     private RadioButton radio1, radio2, radio3, radio4, radio5, radio6, radio7;
     int select = 0;
     int[] finalscores = {0, 0, 0, 0, 0, 0, 0};
@@ -23,6 +23,11 @@ public class votacion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_votacion);
+
+        Intent login = getIntent();
+        String usuario = login.getStringExtra("usuario2");
+        user = findViewById(R.id.user);
+        user.setText("Bienvenido "+usuario+", por favor seleccione el candidato a evaluar");
 
         part1 = findViewById(R.id.part1);
         part2 = findViewById(R.id.part2);

@@ -12,77 +12,90 @@
     tools:layout_editor_absoluteY="32dp">
 
     <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="27dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="Usuario"
+        android:textColor="@color/Color_letra"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="1dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Comunidad de la Arenosa"
         android:textColor="@color/Color_letra"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="644dp"
+        android:layout_marginBottom="25dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Concurso de oratoria - Votación"
         android:textColor="@color/Color_letra"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toTopOf="@+id/user"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="165dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="@color/boton"
         android:fontFamily="@font/open_sans_bold"
         android:onClick="evaluate"
         android:text="Evaluar finalista"
         android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818" />
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="165dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
         android:backgroundTint="@color/boton"
         android:fontFamily="@font/open_sans_bold"
         android:onClick="finalize"
         android:text="Ver Resultados"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932" />
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="124dp"
-        android:layout_height="348dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="84dp"
         android:onClick="radio"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintEnd_toStartOf="@+id/tableLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446">
+        app:layout_constraintTop_toTopOf="@+id/tableLayout">
 
         <TextView
             android:id="@+id/heading1"
@@ -92,6 +105,7 @@
             android:text="N° de finalista"
             android:textAlignment="center"
             android:textColor="@color/Color_letra"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <RadioButton
@@ -100,8 +114,9 @@
             android:layout_height="45dp"
             android:fontFamily="@font/open_sans"
             android:onClick="radio1"
-            android:text="1"
-            android:textColor="@color/Color_letra" />
+            android:text="Ana Li"
+            android:textColor="@color/Color_letra"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio2"
@@ -109,8 +124,9 @@
             android:layout_height="45dp"
             android:fontFamily="@font/open_sans"
             android:onClick="radio2"
-            android:text="2"
-            android:textColor="@color/Color_letra" />
+            android:text="Juan Pérez"
+            android:textColor="@color/Color_letra"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio3"
@@ -118,8 +134,9 @@
             android:layout_height="45dp"
             android:fontFamily="@font/open_sans"
             android:onClick="radio3"
-            android:text="3"
-            android:textColor="@color/Color_letra" />
+            android:text="Leo Kim"
+            android:textColor="@color/Color_letra"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio4"
@@ -127,8 +144,9 @@
             android:layout_height="45dp"
             android:fontFamily="@font/open_sans"
             android:onClick="radio4"
-            android:text="4"
-            android:textColor="@color/Color_letra" />
+            android:text="Luz Wong"
+            android:textColor="@color/Color_letra"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio5"
@@ -136,8 +154,9 @@
             android:layout_height="45dp"
             android:fontFamily="@font/open_sans"
             android:onClick="radio5"
-            android:text="5"
-            android:textColor="@color/Color_letra" />
+            android:text="Max Kao"
+            android:textColor="@color/Color_letra"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio6"
@@ -145,8 +164,9 @@
             android:layout_height="45dp"
             android:fontFamily="@font/open_sans"
             android:onClick="radio6"
-            android:text="6"
-            android:textColor="@color/Color_letra" />
+            android:text="Mia Wu"
+            android:textColor="@color/Color_letra"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/radio7"
@@ -154,22 +174,22 @@
             android:layout_height="45dp"
             android:fontFamily="@font/open_sans"
             android:onClick="radio7"
-            android:text="7"
-            android:textColor="@color/Color_letra" />
+            android:text="Dan Chen"
+            android:textColor="@color/Color_letra"
+            android:textSize="16sp" />
 
     </RadioGroup>
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="124dp"
-        android:layout_height="348dp"
-        android:layout_marginEnd="68dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446">
+        app:layout_constraintTop_toBottomOf="@+id/user">
 
         <TableRow
             android:layout_width="wrap_content"
@@ -183,6 +203,7 @@
                 android:text="Evaluación"
                 android:textAlignment="center"
                 android:textColor="@color/Color_letra"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -200,7 +221,8 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -216,7 +238,8 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -232,7 +255,8 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -248,7 +272,8 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -264,7 +289,8 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -280,7 +306,8 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -296,7 +323,8 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
         </TableRow>
 
     </TableLayout>

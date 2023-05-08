@@ -38,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (usuario.getText().toString().equals(usuario1) && password.getText().toString().equals(password1)){
-            Intent intent = new Intent(this, votacion.class);
-            startActivity(intent);
+            Intent login = new Intent(this, votacion.class);
+            login.putExtra("usuario2", usuario1);
+            startActivity(login);
         }
         else{
             Toast.makeText(this, "Usuario o contraseña incorrectos, registrese en caso de no haberse registrado", Toast.LENGTH_LONG).show();

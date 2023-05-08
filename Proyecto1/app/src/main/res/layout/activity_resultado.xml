@@ -234,7 +234,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:gravity="center"
-                android:text="1"
+                android:text="Ana Li"
                 android:textAlignment="center"
                 android:textColor="@color/Color_letra"
                 android:textSize="16sp" />
@@ -270,7 +270,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:gravity="center"
-                android:text="2"
+                android:text="Juan Pérez"
                 android:textAlignment="center"
                 android:textColor="@color/Color_letra"
                 android:textSize="16sp" />
@@ -306,7 +306,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:gravity="center"
-                android:text="3"
+                android:text="Leo Kim "
                 android:textAlignment="center"
                 android:textColor="@color/Color_letra"
                 android:textSize="16sp" />
@@ -342,7 +342,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:gravity="center"
-                android:text="4"
+                android:text="Luz Wong"
                 android:textAlignment="center"
                 android:textColor="@color/Color_letra"
                 android:textSize="16sp" />
@@ -378,7 +378,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:gravity="center"
-                android:text="5"
+                android:text="Max Kao"
                 android:textAlignment="center"
                 android:textColor="@color/Color_letra"
                 android:textSize="16sp" />
@@ -414,7 +414,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:gravity="center"
-                android:text="6"
+                android:text="Mia Wu"
                 android:textAlignment="center"
                 android:textColor="@color/Color_letra"
                 android:textSize="16sp" />
@@ -450,7 +450,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:gravity="center"
-                android:text="7"
+                android:text="Dan Chen"
                 android:textAlignment="center"
                 android:textColor="@color/Color_letra"
                 android:textSize="16sp" />
