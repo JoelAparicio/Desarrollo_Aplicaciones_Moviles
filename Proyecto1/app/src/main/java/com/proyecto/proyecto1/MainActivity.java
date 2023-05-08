@@ -12,7 +12,6 @@ import android.app.Activity;
 
 public class MainActivity extends AppCompatActivity {
     private String usuario1, password1;
-
     private EditText usuario, password;
 
     @Override
@@ -37,8 +36,11 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
 
         // TESTING ONLY
-        usuario1 = "1234";
-        password1 = "1234";
+//        usuario.setText("1234");
+//        password.setText("1234");
+//
+//        usuario1 = "1234";
+//        password1 = "1234";
         // TESTING ONLY
 
         if (usuario.getText().toString().equals(usuario1) && password.getText().toString().equals(password1)){

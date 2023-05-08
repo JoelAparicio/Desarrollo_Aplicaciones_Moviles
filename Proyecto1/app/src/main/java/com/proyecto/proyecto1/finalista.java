@@ -20,22 +20,14 @@ public class finalista extends AppCompatActivity {
         setContentView(R.layout.activity_finalista);
 
         Intent finalista = getIntent();
-//        Bundle finalista = getIntent().getExtras();
         int finalist = finalista.getIntExtra("id", 0);
 
         tv1 = findViewById(R.id.tv1);
-//        Toast.makeText(this, "Evaluando finalista N°"+finalist, Toast.LENGTH_LONG).show();
         tv1.setText("Finalista N°"+finalist);
 
         eval1 = findViewById(R.id.eval1);
         eval2 = findViewById(R.id.eval2);
         eval3 = findViewById(R.id.eval3);
-
-        // TESTING ONLY
-        eval1.setText(String.valueOf(finalist));
-        eval2.setText(String.valueOf(finalist));
-        eval3.setText(String.valueOf(finalist));
-        // TESTING ONLY
 
     }
 
@@ -61,7 +53,6 @@ public class finalista extends AppCompatActivity {
                 Intent evaluate = new Intent(this, votacion.class);
                 int suma = content + projection + language;
                 evaluate.putExtra("part", suma);
-//                Toast.makeText(this, "Puntaje: "+suma, Toast.LENGTH_LONG).show();
 
                 setResult(RESULT_OK, evaluate);
                 finish();

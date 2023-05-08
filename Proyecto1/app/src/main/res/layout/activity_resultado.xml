@@ -8,15 +8,171 @@
     tools:context=".resultado">
 
     <TableLayout
+        android:id="@+id/tableLayout3"
+        android:layout_width="364dp"
+        android:layout_height="194dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225">
+
+        <TableRow
+            android:id="@+id/header"
+            android:layout_width="321dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/headingA"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="N° de finalista"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/headingB"
+                android:layout_width="89dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/open_sans"
+                android:text="Puntaje"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/headingC"
+                android:layout_width="149dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/open_sans"
+                android:text="Posición"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/firstNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:fontFamily="@font/open_sans"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/firstScore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/open_sans"
+                android:text="empty"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/fp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/open_sans"
+                android:text="1er Lugar"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/secondNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:fontFamily="@font/open_sans"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/secondScore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/open_sans"
+                android:text="empty"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/open_sans"
+                android:text="2do Lugar"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/thirdNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/thirdScore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="empty"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="3er Lugar"
+                android:textAlignment="center"
+                android:textColor="@color/Color_letra"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
         android:id="@+id/tableLayout2"
         android:layout_width="365dp"
         android:layout_height="276dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343">
+        app:layout_constraintVertical_bias="0.872">
 
         <TableRow
             android:id="@+id/theader"
@@ -311,8 +467,23 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.12" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Resumen final"
+        android:textColor="@color/Color_letra"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

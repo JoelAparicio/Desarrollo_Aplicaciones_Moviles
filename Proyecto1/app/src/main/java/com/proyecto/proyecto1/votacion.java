@@ -15,10 +15,10 @@ public class votacion extends AppCompatActivity {
     private TextView part1, part2, part3, part4, part5, part6, part7;
     private RadioButton radio1, radio2, radio3, radio4, radio5, radio6, radio7;
     int select = 0;
-//    int[] finalscores = {0, 0, 0, 0, 0, 0, 0};
+    int[] finalscores = {0, 0, 0, 0, 0, 0, 0};
 
     // TESTING ONLY
-    int[] finalscores = {3, 6, 12, 15, 18, 21, 24};
+//    int[] finalscores = {3, 6, 9, 12, 15, 18, 21};
     // TESTING ONLY
 
     @Override
@@ -50,62 +50,34 @@ public class votacion extends AppCompatActivity {
         part7.setText(pending);
 
         // TESTING ONLY
-        for (int i = 0; i < finalscores.length; i++) {
-//            Toast.makeText(this, "test "+i, Toast.LENGTH_SHORT).show();
-
-            if (i == 0) {
-                part1.setText(String.valueOf(finalscores[i]));
-            }
-            else if (i == 1) {
-                part2.setText(String.valueOf(finalscores[i]));
-            }
-            else if (i == 2) {
-                part3.setText(String.valueOf(finalscores[i]));
-            }
-            else if (i == 3) {
-                part4.setText(String.valueOf(finalscores[i]));
-            }
-            else if (i == 4) {
-                part5.setText(String.valueOf(finalscores[i]));
-            }
-            else if (i == 5) {
-                part6.setText(String.valueOf(finalscores[i]));
-            }
-            else if (i == 6) {
-                part7.setText(String.valueOf(finalscores[i]));
-            }
-
-        }
+//        for (int i = 0; i < finalscores.length; i++) {
+//
+//            if (i == 0) {
+//                part1.setText(String.valueOf(finalscores[i]));
+//            }
+//            else if (i == 1) {
+//                part2.setText(String.valueOf(finalscores[i]));
+//            }
+//            else if (i == 2) {
+//                part3.setText(String.valueOf(finalscores[i]));
+//            }
+//            else if (i == 3) {
+//                part4.setText(String.valueOf(finalscores[i]));
+//            }
+//            else if (i == 4) {
+//                part5.setText(String.valueOf(finalscores[i]));
+//            }
+//            else if (i == 5) {
+//                part6.setText(String.valueOf(finalscores[i]));
+//            }
+//            else if (i == 6) {
+//                part7.setText(String.valueOf(finalscores[i]));
+//            }
+//        }
         // TESTING ONLY
 
 
     }
-
-//    public void radio (View v) {
-//        boolean checked = ((RadioButton) v).isChecked();
-//
-//        if (v.getId() == R.id.radio1) {
-//            if (checked) {
-//                select = 1;
-//            }
-//        }
-//        else if (v.getId() == R.id.radio2) {
-//            if (checked) {
-//                select = 2;
-//            }
-//        }
-//        else if (v.getId() == R.id.radio3) {
-//            if (checked) {
-//                select = 3;
-//            }
-//        }
-//        else {
-//            select = 0;
-//        }
-//
-//        String message = "Ha seleccionado al finalista N°"+select;
-//        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-//    }
 
     public void radio1 (View v) {
         select = 1;
@@ -136,16 +108,6 @@ public class votacion extends AppCompatActivity {
             Toast.makeText(this, "Por favor seleccione un finalista.", Toast.LENGTH_LONG).show();
         }
         else {
-//            if (radio1.isChecked()) {
-//                votacion.putExtra("id", select);
-//            }
-//            else if (radio2.isChecked()) {
-//                votacion.putExtra("id", select);
-//            }
-//            else if (radio3.isChecked()) {
-//                votacion.putExtra("id", select);
-//            }
-
             votacion.putExtra("id", select);
             startActivityForResult(votacion, 50);
         }
