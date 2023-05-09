@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/BackGround"
+    android:background="@drawable/rightmic"
     android:configChanges="orientation|screenSize"
     android:orientation="vertical"
     tools:context=".votacion"
@@ -13,18 +13,19 @@
 
     <TextView
         android:id="@+id/user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="392dp"
+        android:layout_height="69dp"
         android:layout_marginStart="23dp"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="27dp"
         android:fontFamily="@font/open_sans_bold"
         android:gravity="center"
-        android:text="Bienvenido/a [user], por favor seleccione el candidato a evaluar. Todos los finalistas deben ser evaluados antes de ver los resultados."
-        android:textColor="@color/Color_letra"
+        android:text="Bienvenido/a [user], presione el nombre del candidato a evaluar. Todos los finalistas deben ser evaluados antes de ver los resultados."
+        android:textColor="@color/BackGround"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -37,7 +38,7 @@
         android:layout_marginBottom="1dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Comunidad de la Arenosa"
-        android:textColor="@color/Color_letra"
+        android:textColor="@color/BackGround"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +51,7 @@
         android:layout_marginBottom="25dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Concurso de oratoria 2023 - Votación"
-        android:textColor="@color/Color_letra"
+        android:textColor="@color/BackGround"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/user"
         app:layout_constraintStart_toStartOf="@+id/textView4"
@@ -61,13 +62,14 @@
         android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/boton"
+        android:backgroundTint="@color/BackGround"
         android:fontFamily="@font/open_sans_bold"
         android:onClick="evaluate"
         android:text="Evaluar finalista"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/tableLayout"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
@@ -76,7 +78,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="46dp"
-        android:backgroundTint="@color/boton"
+        android:backgroundTint="@color/BackGround"
         android:fontFamily="@font/open_sans_bold"
         android:onClick="finalize"
         android:text="Ver Resultados"
@@ -88,8 +90,8 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="165dp"
+        android:layout_height="350dp"
         android:layout_marginStart="84dp"
         android:onClick="radio"
         app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
@@ -104,7 +106,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="N° de finalista"
             android:textAlignment="center"
-            android:textColor="@color/Color_letra"
+            android:textColor="@color/BackGround"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -112,11 +114,13 @@
             android:id="@+id/radio1"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:buttonTint="#ffffff"
             android:fontFamily="@font/open_sans"
             android:onClick="radio1"
             android:text="Ana Li"
-            android:textColor="@color/Color_letra"
-            android:textSize="16sp" />
+            android:textColor="@color/BackGround"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radio2"
@@ -125,8 +129,9 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio2"
             android:text="Juan Pérez"
-            android:textColor="@color/Color_letra"
-            android:textSize="16sp" />
+            android:textColor="@color/BackGround"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radio3"
@@ -135,8 +140,9 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio3"
             android:text="Leo Kim"
-            android:textColor="@color/Color_letra"
-            android:textSize="16sp" />
+            android:textColor="@color/BackGround"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radio4"
@@ -145,8 +151,9 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio4"
             android:text="Luz Wong"
-            android:textColor="@color/Color_letra"
-            android:textSize="16sp" />
+            android:textColor="@color/BackGround"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radio5"
@@ -155,8 +162,9 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio5"
             android:text="Max Kao"
-            android:textColor="@color/Color_letra"
-            android:textSize="16sp" />
+            android:textColor="@color/BackGround"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radio6"
@@ -165,8 +173,9 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio6"
             android:text="Mia Wu"
-            android:textColor="@color/Color_letra"
-            android:textSize="16sp" />
+            android:textColor="@color/BackGround"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radio7"
@@ -175,15 +184,16 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio7"
             android:text="Dan Chen"
-            android:textColor="@color/Color_letra"
-            android:textSize="16sp" />
+            android:textColor="@color/BackGround"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </RadioGroup>
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="165dp"
+        android:layout_height="350dp"
         android:layout_marginEnd="79dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
@@ -197,12 +207,12 @@
 
             <TextView
                 android:id="@+id/heading2"
-                android:layout_width="124dp"
+                android:layout_width="165dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_bold"
                 android:text="Evaluación"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra"
+                android:textColor="@color/BackGround"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -214,15 +224,15 @@
 
             <TextView
                 android:id="@+id/part1"
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginStart="5dp"
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra"
-                android:textSize="16sp" />
+                android:textColor="@color/BackGround"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -233,13 +243,13 @@
                 android:id="@+id/part2"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="5dp"
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra"
-                android:textSize="16sp" />
+                android:textColor="@color/BackGround"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -250,13 +260,13 @@
                 android:id="@+id/part3"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="5dp"
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra"
-                android:textSize="16sp" />
+                android:textColor="@color/BackGround"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -267,13 +277,13 @@
                 android:id="@+id/part4"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="5dp"
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra"
-                android:textSize="16sp" />
+                android:textColor="@color/BackGround"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -284,13 +294,13 @@
                 android:id="@+id/part5"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="5dp"
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra"
-                android:textSize="16sp" />
+                android:textColor="@color/BackGround"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -301,13 +311,13 @@
                 android:id="@+id/part6"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="5dp"
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra"
-                android:textSize="16sp" />
+                android:textColor="@color/BackGround"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -318,13 +328,13 @@
                 android:id="@+id/part7"
                 android:layout_width="70dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="5dp"
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/Color_letra"
-                android:textSize="16sp" />
+                android:textColor="@color/BackGround"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </TableRow>
 
     </TableLayout>

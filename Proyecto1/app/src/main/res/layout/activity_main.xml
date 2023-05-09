@@ -7,6 +7,18 @@
     android:background="@color/BackGround"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="411dp"
+        android:layout_height="151dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/mic" />
+
     <TextView
         android:id="@+id/tv3"
         android:layout_width="wrap_content"
@@ -16,8 +28,10 @@
         android:textColor="@color/Color_letra"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/st1"
+        app:layout_constraintEnd_toEndOf="@+id/st1"
         app:layout_constraintStart_toStartOf="@+id/st1"
-        app:layout_constraintTop_toBottomOf="@+id/st1" />
+        app:layout_constraintTop_toBottomOf="@+id/st1"
+        app:layout_constraintVertical_bias="0.421" />
 
     <TextView
         android:id="@+id/textView"
@@ -36,16 +50,46 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Concurso de oratoria 2023"
         android:textColor="@color/Color_letra"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/st1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/boton"
+        android:fontFamily="@font/open_sans_bold"
+        android:onClick="entrar"
+        android:text="Entrar"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:hint="Contraseña"
+        android:inputType="numberPassword"
+        android:textColor="@color/Color_letra"
+        android:textColorHint="#C8C2AE"
+        app:layout_constraintStart_toStartOf="@+id/usuario"
+        app:layout_constraintTop_toBottomOf="@+id/usuario" />
 
     <TextView
         android:id="@+id/textView7"
@@ -57,48 +101,16 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:backgroundTint="@color/boton"
-        android:fontFamily="@font/open_sans_bold"
-        android:onClick="entrar"
-        android:text="Entrar"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
-    <Switch
-        android:id="@+id/st1"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="28dp"
-        android:fontFamily="@font/open_sans"
-        android:minHeight="100dp"
-        android:onClick="registrarse"
-        android:switchMinWidth="55dp"
-        android:textColor="@color/Color_letra"
-        android:thumbTint="@color/white"
-        android:trackTint="@color/boton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintVertical_bias="0.251" />
 
     <EditText
         android:id="@+id/usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="267dp"
+        android:layout_marginTop="244dp"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:fontFamily="@font/open_sans"
@@ -108,23 +120,25 @@
         android:textColor="@color/Color_letra"
         android:textColorHint="#C8C2AE"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/white"
-        android:ems="10"
+    <Switch
+        android:id="@+id/st1"
+        android:layout_width="67dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/open_sans"
-        android:gravity="center"
-        android:hint="Contraseña"
-        android:inputType="numberPassword"
+        android:minHeight="100dp"
+        android:onClick="registrarse"
+        android:switchMinWidth="55dp"
         android:textColor="@color/Color_letra"
-        android:textColorHint="#C8C2AE"
-        app:layout_constraintStart_toStartOf="@+id/usuario"
-        app:layout_constraintTop_toBottomOf="@+id/usuario" />
+        android:thumbTint="@color/white"
+        android:trackTint="@color/boton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

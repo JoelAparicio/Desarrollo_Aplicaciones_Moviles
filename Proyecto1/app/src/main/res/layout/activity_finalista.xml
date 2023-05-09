@@ -4,9 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/BackGround"
-    android:backgroundTint="@color/BackGround"
+    android:background="#122631"
     tools:context=".finalista">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="411dp"
+        android:layout_height="151dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/mic" />
 
     <TextView
         android:id="@+id/textView3"
@@ -41,16 +52,15 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/boton"
+        android:backgroundTint="@color/Letra2"
         android:fontFamily="@font/open_sans_bold"
         android:onClick="evaluate"
         android:text="Finalizar evaluación"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
-        app:layout_constraintVertical_bias="0.168" />
+        app:layout_constraintVertical_bias="0.089" />
 
     <TableLayout
         android:id="@+id/tableLayout2"
@@ -113,9 +123,9 @@
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:hint="1-10"
-                android:textColorHint="#C8C2AE"
                 android:inputType="number"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textColorHint="#C8C2AE" />
         </TableRow>
 
         <TableRow
@@ -141,9 +151,9 @@
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:hint="1-10"
-                android:textColorHint="#C8C2AE"
                 android:inputType="number"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textColorHint="#C8C2AE" />
         </TableRow>
 
         <TableRow
@@ -169,9 +179,9 @@
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
                 android:hint="1-10"
-                android:textColorHint="#C8C2AE"
                 android:inputType="number"
-                android:textColor="@color/Color_letra" />
+                android:textColor="@color/Color_letra"
+                android:textColorHint="#C8C2AE" />
         </TableRow>
 
     </TableLayout>
