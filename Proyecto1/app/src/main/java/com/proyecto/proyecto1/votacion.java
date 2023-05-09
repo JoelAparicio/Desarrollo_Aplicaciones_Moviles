@@ -27,7 +27,7 @@ public class votacion extends AppCompatActivity {
         Intent login = getIntent();
         String usuario = login.getStringExtra("usuario2");
         user = findViewById(R.id.user);
-        user.setText("Bienvenido "+usuario+", por favor seleccione el candidato a evaluar");
+        user.setText("Bienvenido/a "+usuario+", por favor seleccione el candidato a evaluar. Todos los finalistas deben ser evaluados antes de ver los resultados.");
 
         part1 = findViewById(R.id.part1);
         part2 = findViewById(R.id.part2);
@@ -82,7 +82,7 @@ public class votacion extends AppCompatActivity {
         Intent votacion = new Intent(this, finalista.class);
 
         if (select == 0) {
-            Toast.makeText(this, "Por favor seleccione un finalista.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Debe seleccionar el finalista a evaluar.", Toast.LENGTH_LONG).show();
         }
         else {
             votacion.putExtra("id", select);
@@ -142,7 +142,7 @@ public class votacion extends AppCompatActivity {
         }
 
         if (missing) {
-            Toast.makeText(this, "Por favor evalúe a todos los finalistas.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Debe evaluar a todos los finalistas antes de ver los resultados.", Toast.LENGTH_LONG).show();
         }
         else {
             Intent intent = new Intent(this, resultado.class);

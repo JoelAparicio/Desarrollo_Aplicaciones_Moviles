@@ -16,7 +16,7 @@ public class resultado extends AppCompatActivity {
     TextView score1, score2, score3, score4, score5, score6, score7;
     TextView pos1, pos2, pos3, pos4, pos5, pos6, pos7;
 
-    TextView firstNumber, secondNumber, thirdNumber;
+    TextView firstFinalist, secondFinalist, thirdFinalist;
     TextView firstScore, secondScore, thirdScore;
     TextView fp, sp, tp;
 
@@ -73,9 +73,11 @@ public class resultado extends AppCompatActivity {
 
         // RANKINGS
 
-        firstNumber = findViewById(R.id.firstNumber);
-        secondNumber = findViewById(R.id.secondNumber);
-        thirdNumber = findViewById(R.id.thirdNumber);
+        String[] names = {"Ana Li", "Juan Pérez", "Leo Kim", "Luz Wong", "Max Kao", "Mia Wu", "Dan Chen"};
+
+        firstFinalist = findViewById(R.id.firstFinalist);
+        secondFinalist = findViewById(R.id.secondFinalist);
+        thirdFinalist = findViewById(R.id.thirdFinalist);
 
         firstScore = findViewById(R.id.firstScore);
         secondScore = findViewById(R.id.secondScore);
@@ -90,10 +92,10 @@ public class resultado extends AppCompatActivity {
         scoreArray[1] = secondScore;
         scoreArray[2] = thirdScore;
 
-        TextView[] numberArray = new TextView[3];
-        numberArray[0] = firstNumber;
-        numberArray[1] = secondNumber;
-        numberArray[2] = thirdNumber;
+        TextView[] nameArray = new TextView[3];
+        nameArray[0] = firstFinalist;
+        nameArray[1] = secondFinalist;
+        nameArray[2] = thirdFinalist;
 
         TextView[] positionArray = new TextView[3];
         positionArray[0] = fp;
@@ -125,21 +127,15 @@ public class resultado extends AppCompatActivity {
             }
         }
 
-
-        int firstNumber = firstIndex + 1;
-        int secondNumber = secondIndex + 1;
-        int thirdNumber = thirdIndex + 1;
-        int fourthNumber = fourthIndex + 1;
-
         String[] positions = {"1er lugar", "2do lugar", "3er lugar"};
 
         scoreArray[0].setText(String.valueOf(scores[firstIndex]));
         scoreArray[1].setText(String.valueOf(scores[secondIndex]));
         scoreArray[2].setText(String.valueOf(scores[thirdIndex]));
 
-        numberArray[0].setText(String.valueOf(firstNumber));
-        numberArray[1].setText(String.valueOf(secondNumber));
-        numberArray[2].setText(String.valueOf(thirdNumber));
+        nameArray[0].setText(names[firstIndex]);
+        nameArray[1].setText(names[secondIndex]);
+        nameArray[2].setText(names[thirdIndex]);
 
         if (scores[firstIndex] == scores[secondIndex] && scores[secondIndex] == scores[thirdIndex]) {
             positions[0] = "Empatado por 1er lugar";

@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(login);
         }
         else{
-            Toast.makeText(this, "Usuario o contraseña incorrectos, registrese en caso de no haberse registrado", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Usuario o contraseña incorrectos, debe registrarse en caso de no haberse registrado", Toast.LENGTH_LONG).show();
         }
 
     }

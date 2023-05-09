@@ -65,7 +65,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/firstNumber"
+                android:id="@+id/firstFinalist"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:fontFamily="@font/open_sans"
@@ -104,7 +104,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/secondNumber"
+                android:id="@+id/secondFinalist"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:fontFamily="@font/open_sans"
@@ -143,7 +143,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/thirdNumber"
+                android:id="@+id/thirdFinalist"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -485,7 +485,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:fontFamily="@font/open_sans_bold"
-        android:text="Concurso de oratoria - Resultados"
+        android:text="Concurso de oratoria 2023 - Resultados"
         android:textColor="@color/Color_letra"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -518,8 +518,9 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.515" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

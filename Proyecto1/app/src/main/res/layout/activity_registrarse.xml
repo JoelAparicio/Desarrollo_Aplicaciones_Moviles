@@ -8,6 +8,21 @@
     tools:context=".registrarse">
 
     <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Registro"
+        android:textColor="@color/Color_letra"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +42,7 @@
         android:layout_marginStart="13dp"
         android:layout_marginTop="21dp"
         android:fontFamily="@font/open_sans_bold"
-        android:text="Concurso de oratoria"
+        android:text="Concurso de oratoria 2023"
         android:textColor="@color/Color_letra"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
