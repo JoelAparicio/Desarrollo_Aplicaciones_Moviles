@@ -21,7 +21,7 @@
         android:fontFamily="@font/open_sans_bold"
         android:gravity="center"
         android:text="Bienvenido/a [user], presione el nombre del candidato a evaluar. Todos los finalistas deben ser evaluados antes de ver los resultados."
-        android:textColor="@color/BackGround"
+        android:textColor="@color/Color_letra"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
         android:layout_marginBottom="1dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Comunidad de la Arenosa"
-        android:textColor="@color/BackGround"
+        android:textColor="@color/Color_letra"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
         android:layout_marginBottom="25dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Concurso de oratoria 2023 - Votación"
-        android:textColor="@color/BackGround"
+        android:textColor="@color/Color_letra"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/user"
         app:layout_constraintStart_toStartOf="@+id/textView4"
@@ -106,7 +106,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="N° de finalista"
             android:textAlignment="center"
-            android:textColor="@color/BackGround"
+            android:textColor="@color/Color_letra"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -118,7 +118,7 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio1"
             android:text="Ana Li"
-            android:textColor="@color/BackGround"
+            android:textColor="@color/Color_letra"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -129,7 +129,7 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio2"
             android:text="Juan Pérez"
-            android:textColor="@color/BackGround"
+            android:textColor="@color/Color_letra"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -140,7 +140,7 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio3"
             android:text="Leo Kim"
-            android:textColor="@color/BackGround"
+            android:textColor="@color/Color_letra"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -151,7 +151,7 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio4"
             android:text="Luz Wong"
-            android:textColor="@color/BackGround"
+            android:textColor="@color/Color_letra"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -162,7 +162,7 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio5"
             android:text="Max Kao"
-            android:textColor="@color/BackGround"
+            android:textColor="@color/Color_letra"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -173,7 +173,7 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio6"
             android:text="Mia Wu"
-            android:textColor="@color/BackGround"
+            android:textColor="@color/Color_letra"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -184,7 +184,7 @@
             android:fontFamily="@font/open_sans"
             android:onClick="radio7"
             android:text="Dan Chen"
-            android:textColor="@color/BackGround"
+            android:textColor="@color/Color_letra"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -212,7 +212,7 @@
                 android:fontFamily="@font/open_sans_bold"
                 android:text="Evaluación"
                 android:textAlignment="center"
-                android:textColor="@color/BackGround"
+                android:textColor="@color/Color_letra"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -230,7 +230,7 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/BackGround"
+                android:textColor="@color/Color_letra"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -247,7 +247,7 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/BackGround"
+                android:textColor="@color/Color_letra"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -264,7 +264,7 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/BackGround"
+                android:textColor="@color/Color_letra"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -281,7 +281,7 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/BackGround"
+                android:textColor="@color/Color_letra"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -298,7 +298,7 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/BackGround"
+                android:textColor="@color/Color_letra"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -315,7 +315,7 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/BackGround"
+                android:textColor="@color/Color_letra"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -332,7 +332,7 @@
                 android:gravity="center"
                 android:text="null"
                 android:textAlignment="center"
-                android:textColor="@color/BackGround"
+                android:textColor="@color/Color_letra"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </TableRow>

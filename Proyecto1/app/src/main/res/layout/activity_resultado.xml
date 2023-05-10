@@ -7,13 +7,47 @@
     android:background="@drawable/leftmic"
     tools:context=".resultado">
 
+    <ImageView
+        android:id="@+id/medal1"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/medal2"
+        app:layout_constraintEnd_toStartOf="@+id/tableLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout3"
+        app:srcCompat="@drawable/medal1"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/medal2"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/tableLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout3"
+        app:srcCompat="@drawable/medal2"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/medal3"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/tableLayout3"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medal2"
+        app:srcCompat="@drawable/medal3"
+        android:visibility="invisible" />
+
     <TableLayout
         android:id="@+id/tableLayout3"
         android:layout_width="364dp"
         android:layout_height="194dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.851"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.225">
@@ -513,13 +547,12 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="Concurso de oratoria 2023 - Resultados"
         android:textColor="@color/Color_letra"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -552,5 +585,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.981" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="58dp"
+        android:layout_height="41dp"
+        android:onClick="switch1"
+        android:text="Switch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/finaltv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="El primer lugar fue [name], con [score] puntos!"
+        android:textColor="@color/Color_letra"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout3"
+        app:layout_constraintVertical_bias="0.233" />
+
+    <TextView
+        android:id="@+id/finaltv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver ganadores"
+        android:textColor="@color/Color_letra"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/switch1"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,11 +17,16 @@ import java.util.List;
 
 public class resultado extends AppCompatActivity {
     TextView score1, score2, score3, score4, score5, score6, score7;
-    TextView pos1, pos2, pos3, pos4, pos5, pos6, pos7;
+    TextView pos1, pos2, pos3, pos4, pos5, pos6, pos7, finaltv;
 
     TextView firstFinalist, secondFinalist, thirdFinalist;
     TextView firstScore, secondScore, thirdScore;
     TextView fp, sp, tp;
+    Switch switch1;
+    ImageView medal1, medal2, medal3;
+
+    String winner, winnerscore;
+
 
 
     @Override
@@ -28,6 +36,10 @@ public class resultado extends AppCompatActivity {
 
         Intent resultado = getIntent();
         int[] scores = resultado.getIntArrayExtra("scores");
+
+        finaltv = findViewById(R.id.finaltv);
+        finaltv.setText("");
+        switch1 = findViewById(R.id.switch1);
 
         score1 = findViewById(R.id.score1);
         score2 = findViewById(R.id.score2);
@@ -163,6 +175,8 @@ public class resultado extends AppCompatActivity {
         positionArray[1].setText(positions[1]);
         positionArray[2].setText(positions[2]);
 
+        winner = names[firstIndex];
+        winnerscore = String.valueOf(scores[firstIndex]);
 
         // RESUMEN FINAL
 
@@ -206,4 +220,25 @@ public class resultado extends AppCompatActivity {
         }
 
     }
+
+    public void switch1(View v){
+        medal1 = findViewById(R.id.medal1);
+        medal2 = findViewById(R.id.medal2);
+        medal3 = findViewById(R.id.medal3);
+
+        if (v.getId() == R.id.switch1) {
+            if (switch1.isChecked()) {
+                medal1.setVisibility(View.VISIBLE);
+                medal2.setVisibility(View.VISIBLE);
+                medal3.setVisibility(View.VISIBLE);
+                finaltv.setText("El primer lugar fue "+winner+", con "+winnerscore+" puntos!");
+            } else {
+                medal1.setVisibility(View.INVISIBLE);
+                medal2.setVisibility(View.INVISIBLE);
+                medal3.setVisibility(View.INVISIBLE);
+                finaltv.setText("");
+            }
+        }
+    }
+
 }
