@@ -39,10 +39,11 @@ public class MainActivity extends AppCompatActivity {
                 if (selectedItem.equals("Elevar al cubo")) {
                     et2.setVisibility(View.INVISIBLE);
                     v2.setVisibility(View.INVISIBLE);
-                    //debo formatear la respuesta
+                    tv1.setText("Resultado");
                 } else {
                     et2.setVisibility(View.VISIBLE);
                     v2.setVisibility(View.VISIBLE);
+                    tv1.setText("Resultado");
                 }
             }
             @Override
@@ -61,19 +62,19 @@ public class MainActivity extends AppCompatActivity {
         String operacion = spinner1.getSelectedItem().toString();
         if (operacion.equals("Sumar")){
             double suma = num1 + num2;
-            tv1.setText("La suma es ="+df.format(suma));
+            tv1.setText("La suma es= "+df.format(suma));
         } else if (operacion.equals("Restar")){
             double resta = num1 - num2;
-            tv1.setText("La resta es ="+df.format(resta));
+            tv1.setText("La resta es= "+df.format(resta));
         } else if (operacion.equals("Multiplicar")){
             double multiplicacion = num1 * num2;
-            tv1.setText("La multiplicacion es ="+df.format(multiplicacion));
+            tv1.setText("La multiplicacion es= "+df.format(multiplicacion));
         } else if (operacion.equals("Dividir")){
             double division = num1 / num2;
-            tv1.setText("La division es ="+df.format(division));
+            tv1.setText("La division es= "+df.format(division));
         } else if (operacion.equals("Elevar al cubo")){
             double cubo = Math.pow(num1, 3);
-            tv1.setText("La potencia cubica es ="+df.format(cubo));
+            tv1.setText("La potencia cubica es= "+df.format(cubo));
         }
     }
 }
