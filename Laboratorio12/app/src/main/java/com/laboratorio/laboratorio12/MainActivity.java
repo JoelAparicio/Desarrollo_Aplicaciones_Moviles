@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 c = db.rawQuery("select * from contacto", null);
             }
         });
-        
+
         // Botón borrar
         borrar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
