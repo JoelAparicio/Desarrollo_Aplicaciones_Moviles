@@ -15,8 +15,6 @@ import android.net.Uri;
 
 
 
-
-
 public class MainActivity extends AppCompatActivity {
     private VideoView videoView;
     @Override
